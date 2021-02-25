@@ -1,7 +1,7 @@
-require_relative 'lib/hello_world/version'
+require_relative 'lib/modshot-xp/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "hello_world"
+  spec.name          = "modshot-xp"
   spec.version       = HelloWorld::VERSION
   spec.authors       = ["Speak2Erase"]
   spec.email         = ["54482069+Speak2Erase@users.noreply.github.com"]
@@ -17,6 +17,7 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "TODO: Put your gem's public repo URL here."
   spec.metadata["changelog_uri"] = "TODO: Put your gem's CHANGELOG.md URL here."
+  spec.add_dependency("ruby2d")
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
