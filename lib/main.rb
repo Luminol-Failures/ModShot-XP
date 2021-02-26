@@ -1,2 +1,2 @@
-require_relative 'lib/modshot-xp'
+require_relative 'modshot-xp'
 require 'ruby2d'

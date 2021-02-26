@@ -1,24 +1,18 @@
 #require_relative 'modshot-xp/version/version.rb'
 #require "modshot-xp/version"
-require 'ruby2d'
+require 'flammarion'
 
 
-  
+
 
 
 module Modshotxp
   class Error < StandardError; end
   # Your code goes here...
 
-  Window.set width: 1490, height: 880
+  f = Flammarion::Engraving.new
   
-  # Create a new shape
-  TestImage = Image.new(
-    'lib/modshot-xp/res/blip.png'
-  )
-  #TestImage.color = 'red'
-
-  Window.show
-
+  f.puts "Hello World!"
+  
 
 end
