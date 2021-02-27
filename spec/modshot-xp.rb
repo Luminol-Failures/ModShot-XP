@@ -1,6 +1,6 @@
-RSpec.describe HelloWorld do
+RSpec.describe Modshotxp do
   it "has a version number" do
-    expect(HelloWorld::VERSION).not_to be nil
+    expect(Modshotxp::VERSION).not_to be nil
   end
 
   it "does something useful" do
