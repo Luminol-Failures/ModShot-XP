@@ -8,7 +8,7 @@
             "name": "Debug Local File",
             "type": "Ruby",
             "request": "launch",
-            "program": "${workspaceRoot}/gosu_testing.rb"
+            "program": "${workspaceRoot}/main.rb"
         }
     ]
 }

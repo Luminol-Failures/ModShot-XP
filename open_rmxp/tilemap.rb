@@ -1,4 +1,5 @@
 class Tilemap
+  #TODO: Reverse-engineer the wacko autiltile system
   def initialize(tileset)
     @tileset = tileset
     @autotiles = [[]]

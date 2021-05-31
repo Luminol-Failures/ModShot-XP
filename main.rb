@@ -1,13 +1,13 @@
 require "minigl"
-include MiniGL
 require "json"
 
 require_relative "open_rmxp/requires"
 
 class TestWindow < Gosu::Window
-  def initialize(map = 14)
+  def initialize(map = 266)
+    @map = map
     @tilesets = JSON.load(File.open("Data_JSON/Tilesets.json"))
-    @mapdata = JSON.load(File.open("Data_JSON/Map#{map.to_s.rjust(3, "0")}.json"))
+    @mapdata = JSON.load(File.open("Data_JSON/Map#{@map.to_s.rjust(3, "0")}.json"))
     @tilemap = Tilemap.new(@tilesets["tilesets"][@mapdata["tileset_id"] - 1])
     @eventmap = Eventmap.new(@mapdata["events"], @tilesets["tilesets"][@mapdata["tileset_id"] - 1])
     @panomap = Panomap.new(@tilesets["tilesets"][@mapdata["tileset_id"] - 1])
