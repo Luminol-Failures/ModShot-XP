@@ -7,6 +7,7 @@ class Tilemap
       @autotiles << Gosu::Image.load_tiles("Graphics/Autotiles/#{value}.png", 32, 32, { tileable: true }) unless value == ""
     end
     @tilemap = Gosu::Image.load_tiles("Graphics/Tilesets/#{@tileset["tileset_name"]}.png", 32, 32, { tileable: true })
+    @grid = Gosu::Image.new("open_rmxp/Graphics/tile_grid.png", { tileable: true })
   end
 
   def tileset=(tileset)
@@ -31,6 +32,7 @@ class Tilemap
               @tilemap[0].draw(xindex * 32 * fx, yindex * 32 * fy, zindex, fx, fy)
             end
           end
+          @grid.draw(xindex * 32 * fx, yindex * 32 * fy, zindex, fx, fy)
         end
       end
     end
