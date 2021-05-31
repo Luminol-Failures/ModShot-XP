@@ -10,7 +10,7 @@ class Panomap
     return if @tileset["panorama_name"] == ""
     (width / (@panorama.width * fx)).ceil.times do |xoffset|
       (height / (@panorama.height * fy)).ceil.times do |yoffset|
-        @panorama.draw(@panorama.width * fx * xoffset, @panorama.height * fy * yoffset, -100, fx, fy)
+        @panorama.draw(@panorama.width * fx * xoffset + $global_settings.xoffset, @panorama.height * fy * yoffset + $global_settings.yoffset, -100, fx, fy)
       end
     end
   end

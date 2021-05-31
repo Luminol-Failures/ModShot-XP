@@ -27,12 +27,12 @@ class Tilemap
             #end
           else
             begin
-              @tilemap[value - 384].draw(xindex * 32 * fx, yindex * 32 * fy, zindex, fx, fy) unless value == 0
+              @tilemap[value - 384].draw(xindex * 32 * fx + $global_settings.xoffset, yindex * 32 * fy + $global_settings.yoffset, zindex, fx, fy) unless value == 0
             rescue
-              @tilemap[0].draw(xindex * 32 * fx, yindex * 32 * fy, zindex, fx, fy)
+              @tilemap[0].draw(xindex * 32 * fx + $global_settings.xoffset, yindex * 32 * fy + $global_settings.yoffset, zindex, fx, fy)
             end
           end
-          @grid.draw(xindex * 32 * fx, yindex * 32 * fy, zindex, fx, fy)
+          @grid.draw(xindex * 32 * fx + $global_settings.xoffset, yindex * 32 * fy + $global_settings.yoffset, zindex, fx, fy)
         end
       end
     end

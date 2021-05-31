@@ -4,7 +4,7 @@ class Eventmap
     @eventdata = eventdata
     @tileset = tileset
 
-    @z = 100
+    @z = 1
 
     @eventbasegraphics = {}
     @eventgraphics = {}
@@ -43,8 +43,8 @@ class Eventmap
         end
 
         @eventgraphics[key][direction + value["pages"][0]["graphic"]["pattern"]].draw(
-          ((value["x"] * 32) - (@eventgraphics[key][0].width / 4)) * fx,
-          ((value["y"] * 32) - (@eventgraphics[key][0].height / 2)) * fy,
+          ((value["x"] * 32) - (@eventgraphics[key][0].width / 4)) * fx + $global_settings.xoffset,
+          ((value["y"] * 32) - (@eventgraphics[key][0].height / 2)) * fy + $global_settings.yoffset,
           @z,
           fx,
           fy,
@@ -52,10 +52,10 @@ class Eventmap
         #TODO: Fix coordinates drawing off
 
       elsif @eventgraphics[key] > 0
-        @tilemap[@eventgraphics[key] - 384].draw(value["x"] * 32 * fx, value["y"] * 32 * fy, @z, fx, fy)
+        @tilemap[@eventgraphics[key] - 384].draw(value["x"] * 32 * fx + $global_settings.xoffset, value["y"] * 32 * fy + $global_settings.yoffset, @z, fx, fy)
       end
 
-      @event_overlay.draw(value["x"] * 32 * fx, value["y"] * 32 * fy, @z, fx, fy) #? Always draw the overlay
+      @event_overlay.draw(value["x"] * 32 * fx + $global_settings.xoffset, value["y"] * 32 * fy + $global_settings.yoffset, 1000, fx, fy) #? Always draw the overlay
 
       eventcoords << [value["x"], value["y"]].to_s
     end
