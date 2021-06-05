@@ -6,6 +6,7 @@ class MapBar
         type :horizontal
       }
       tool_bar {
+        background :white
         tool_item {
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\new.png')
         }
@@ -17,6 +18,7 @@ class MapBar
         }
       }
       tool_bar {
+        background :white
         tool_item {
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\cut.png')
         }
@@ -31,11 +33,16 @@ class MapBar
         }
       }
       tool_bar {
+        background :white
         tool_item {
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\undo.png')
         }
+        tool_item {
+          image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\redo.png')
+        }
       }
       tool_bar {
+        background :white
         tool_item(:radio) {
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\layer1.png')
         }
@@ -50,6 +57,7 @@ class MapBar
         }
       }
       tool_bar {
+        background :white
         tool_item(:radio) {
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\draw.png')
         }
@@ -67,6 +75,7 @@ class MapBar
         }
       }
       tool_bar {
+        background :white
         tool_item(:radio) {
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\zoom1-1.png')
         }
@@ -78,6 +87,7 @@ class MapBar
         }
       }
       tool_bar {
+        background :white
         tool_item {
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\database.png')
         }

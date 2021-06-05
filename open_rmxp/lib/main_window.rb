@@ -76,6 +76,10 @@ class MainWindow
         }
         composite(:border) {
           map_bar { }
+          label {
+            text "Map here"
+            background :green
+          }
         }
       }
     }
