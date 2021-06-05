@@ -1,4 +1,3 @@
-require_relative "globalsettings"
-require_relative "tilemap"
-require_relative "eventmap"
-require_relative "panomap"
+require "glimmer-dsl-swt"
+
+require_relative "lib/sash_form_presenter"
