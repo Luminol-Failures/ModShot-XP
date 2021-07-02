@@ -1,10 +1,13 @@
 class MapBar
   include Glimmer::UI::CustomWidget
   body {
-    composite {
+    composite(:border) {
+      layout_data(:fill, :end, true, false)
       row_layout {
         type :horizontal
       }
+      background :white
+
       tool_bar {
         background :white
         tool_item {
@@ -17,6 +20,7 @@ class MapBar
           image('G:\Github-stuff\Open-RMXP\open_rmxp\Graphics\menu\save.png')
         }
       }
+
       tool_bar {
         background :white
         tool_item {

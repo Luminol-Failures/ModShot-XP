@@ -51,7 +51,7 @@ class MainWindow
         }
       }
 
-      sash_form(:border) {
+      @sash_1 = sash_form(:border) {
         layout_data(:fill, :fill, true, true) {
           height_hint 200
         }
@@ -75,13 +75,27 @@ class MainWindow
           @mapinfos = tree { }
         }
         composite(:border) {
+          background :white
           map_bar { }
-          label {
-            text "Map here"
-            background :green
-          }
+          map_display
         }
       }
+
+      on_swt_Resize {
+ #width = @sash_1.swt_widget.get_client_area.width
+               #weights = [
+               #  1,
+               #  2,
+               #] unless weights
+               #
+               #change = 200 / width.to_f
+               #weights[0] = change * 1000.0
+               #weights[1] = 1000 - weights[0]
+               #
+               #STDERR.puts weights
+               #
+               #@sash_1.swt_widget.setWeights weights[0], weights[1]
+        }
     }
   end
 
